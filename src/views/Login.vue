@@ -21,11 +21,12 @@ export default {
     name:'Login',
     methods:{
         gohome(){
-          this.$router('./welcome')
+          this.$router.push('./welcome')
         }
+         
     },
     mounted(){
-        this.$request.get('/login',{name:'jack'},{mock:true}).then((res)=>{
+        this.$request.get('/login').then((res)=>{
             console.log(res)
         }).catch((err)=>{
             console.log(err)

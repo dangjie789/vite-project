@@ -5,19 +5,12 @@ import ElementPlus from 'element-plus';
 import axios from 'axios';
 import config from './config/index.js'
 import request from './utils/request'
-
-
-console.log("环境变量=>",
-    import.meta.env)
-
-/* axios.get(config.mockApi + '/login').then((res) => {
-    console.log(res.data)
-}) */
-
+import storage from './utils/storage'
 
 const app = createApp(App);
 
 //将一个对象全局挂载
 app.config.globalProperties.$request = request;
+app.config.globalProperties.$storage = storage;
 
 app.use(router).use(ElementPlus, { size: 'small' }).mount('#app')
