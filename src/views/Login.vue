@@ -1,6 +1,10 @@
 <template>
-<h1>欢迎来到登录页面</h1>
+<div>
+
+    <h1>欢迎来到登录页面</h1>
 <el-button @click="gohome">返回主页</el-button>
+</div>
+
 
 </template>
 <script >
